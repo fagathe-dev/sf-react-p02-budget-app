@@ -1,0 +1,40 @@
+{% extends '@CorePhp/layout.html.twig' %}
+
+{% block content %}
+  {% include '@CorePhp/components/_text.html.twig' with {
+    level: 'h1',
+    content: 'Code de vérification'
+  } only %}
+
+  {% include '@CorePhp/components/_text.html.twig' with {
+    level: 'p',
+    content: 'Bonjour <strong>' ~ (dto.recipientName|e) ~ '</strong>,'
+  } only %}
+
+  {% include '@CorePhp/components/_text.html.twig' with {
+    level: 'p',
+    content: 'Utilisez le code à usage unique ci-dessous pour ' ~ (dto.purposeLabel|e) ~ ' :'
+  } only %}
+
+  {% include '@CorePhp/components/_box.html.twig' with {
+    content: '<div style="font-size: 32px; font-weight: 700; letter-spacing: 8px; text-align: center; font-family: monospace; color: #0f172b;">' ~ (dto.otpCode|e) ~ '</div>',
+    background: '#f8fafc',
+    padding: '24px',
+    radius: '12px',
+    custom_style: 'margin: 24px 0; border: 1px solid #e2e8f0;'
+  } only %}
+
+  {% include '@CorePhp/components/_alert.html.twig' with {
+    type: 'info',
+    title: 'Validité du code',
+    content: 'Ce code est valable pendant <strong>' ~ ((dto.validityLabel ?? (dto.ttlMinutes ~ ' minutes'))|e) ~ '</strong>. Ne le partagez jamais avec qui que ce soit.'
+  } only %}
+
+  {% include '@CorePhp/components/_divider.html.twig' only %}
+
+  {% include '@CorePhp/components/_text.html.twig' with {
+    level: 'small',
+    color: '#64748b',
+    content: 'Si vous n\'êtes pas à l\'origine de cette demande, vous pouvez ignorer cet e-mail en toute sécurité.'
+  } only %}
+{% endblock %}

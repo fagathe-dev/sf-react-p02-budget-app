@@ -1,0 +1,49 @@
+{% extends '@CorePhp/layout.html.twig' %}
+
+{% block content %}
+  {% include '@CorePhp/components/_text.html.twig' with {
+    level: 'h1',
+    content: 'Vous êtes invité à rejoindre « ' ~ (dto.boardName|e) ~ ' »'
+  } only %}
+
+  {% include '@CorePhp/components/_text.html.twig' with {
+    level: 'p',
+    content: 'Bonjour <strong>' ~ (dto.recipientName|e) ~ '</strong>,'
+  } only %}
+
+  {% include '@CorePhp/components/_text.html.twig' with {
+    level: 'p',
+    content: '<strong>' ~ (dto.inviterName|e) ~ '</strong> vous invite à rejoindre son ' ~ (dto.boardTypeLabel|lower|e) ~ ' <strong>« ' ~ (dto.boardName|e) ~ ' »</strong>. Une fois l\'invitation acceptée, votre part des dépenses communes apparaîtra automatiquement dans votre budget personnel.'
+  } only %}
+
+  {% include '@CorePhp/components/_section.html.twig' with {
+    align: 'center',
+    padding: '24px 0',
+    content: include('@CorePhp/components/_button.html.twig', {
+      url: dto.acceptUrl,
+      label: 'Voir l\'invitation',
+      bg_color: '#0f172b',
+      text_color: '#ffffff'
+    }, with_context = false)
+  } only %}
+
+  {% include '@CorePhp/components/_alert.html.twig' with {
+    type: 'info',
+    title: 'Invitation temporaire',
+    content: 'Ce lien est valable jusqu\'au <strong>' ~ (dto.expiresAt|date('d/m/Y à H:i', 'Europe/Paris')) ~ '</strong>. Si vous n\'avez pas encore de compte, vous pourrez en créer un avant d\'accepter.'
+  } only %}
+
+  {% include '@CorePhp/components/_divider.html.twig' only %}
+
+  {% include '@CorePhp/components/_text.html.twig' with {
+    level: 'small',
+    color: '#64748b',
+    content: 'Lien direct : ' ~ (dto.acceptUrl|e)
+  } only %}
+
+  {% include '@CorePhp/components/_text.html.twig' with {
+    level: 'small',
+    color: '#64748b',
+    content: 'Vous ne connaissez pas ' ~ (dto.inviterName|e) ~ ' ? Ignorez simplement cet e-mail : rien ne sera partagé sans votre accord.'
+  } only %}
+{% endblock %}
