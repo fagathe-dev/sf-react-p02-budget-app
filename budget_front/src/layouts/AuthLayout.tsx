@@ -1,9 +1,6 @@
-import { useTheme } from '@/hooks/useTheme';
-import { Icon } from '@/ui/components/Base/Icon';
-import { ThemeModeSwitcher } from '@/ui/components/Navigation/ThemeModeSwitcher';
-import { Text } from '@/ui/components/Typo/Text';
+import { Icon, Text, ThemeModeSwitcher } from '@/ui/components';
 import { Outlet } from 'react-router-dom';
-import styled from 'styled-components';
+import styled, { useTheme } from 'styled-components';
 
 const AuthContainer = styled.div`
   min-height: 100vh;
@@ -37,7 +34,7 @@ const FormBox = styled.div`
 `;
 
 export const AuthLayout = () => {
-  const { theme } = useTheme();
+  const theme = useTheme();
 
   return (
     <AuthContainer>

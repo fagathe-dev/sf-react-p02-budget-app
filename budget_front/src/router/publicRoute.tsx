@@ -1,5 +1,5 @@
 import { useAuthStore } from '@/stores/auth.store';
-import { Loading } from '@/ui/components/Feedback/Loading';
+import { Loading } from '@/ui/components';
 import { Navigate, Outlet } from 'react-router-dom';
 
 export const PublicRoute = () => {

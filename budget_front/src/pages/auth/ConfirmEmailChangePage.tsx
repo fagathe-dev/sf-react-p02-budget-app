@@ -1,13 +1,13 @@
 import { getErrorMessage } from '@/services/apiError';
 import { confirmEmailChange } from '@/services/auth.api';
 import { useAuthStore } from '@/stores/auth.store';
-import { Button } from '@/ui/components/Base/Button';
-import { Card } from '@/ui/components/Content/Card';
-import { Alert } from '@/ui/components/Feedback/Alert';
-import { Loading } from '@/ui/components/Feedback/Loading';
-import { Title } from '@/ui/components/Typo/Title';
+import { Button } from '@/ui/components';
+import { Card } from '@/ui/components';
+import { Alert } from '@/ui/components';
+import { Loading } from '@/ui/components';
+import { Title } from '@/ui/components';
 import { useEffect, useRef, useState } from 'react';
-import { Link, useSearchParams } from 'react-router-dom';
+import { useSearchParams } from 'react-router-dom';
 import styled from 'styled-components';
 
 type Status = { type: 'loading' } | { type: 'success' | 'error'; message: string };
@@ -70,7 +70,7 @@ export const ConfirmEmailChangePage = () => {
         )}
 
         {status.type !== 'loading' && (
-          <Button as={Link} to={authToken ? '/profile' : '/login'} fullWidth>
+          <Button href={authToken ? '/profile' : '/login'} fullWidth>
             {authToken ? 'Retour à mon profil' : 'Se connecter'}
           </Button>
         )}

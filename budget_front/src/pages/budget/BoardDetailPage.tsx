@@ -47,12 +47,7 @@ import {
   ITEM_KIND_LABELS,
 } from '@/utils/budget';
 import React, { useEffect, useState } from 'react';
-import {
-  Link,
-  useNavigate,
-  useParams,
-  useSearchParams,
-} from 'react-router-dom';
+import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import {
   AdjustmentModal,
   BoardSettingsModal,
@@ -190,7 +185,7 @@ export const BoardDetailPage: React.FC = () => {
           title="Budget introuvable"
           description="Ce budget n'existe pas ou vous n'y avez pas accès."
           action={
-            <Button as={Link} to={ROUTES.BOARDS} variant="primary">
+            <Button href={ROUTES.BOARDS} variant="primary">
               Retour à mes budgets
             </Button>
           }
@@ -239,8 +234,7 @@ export const BoardDetailPage: React.FC = () => {
             </Badge>
           </Flex>
           <Button
-            as={Link}
-            to={buildBoardPath(rollup.sourceBoardId, effectivePeriod)}
+            href={buildBoardPath(rollup.sourceBoardId, effectivePeriod)}
             variant="outline"
             size="sm"
           >

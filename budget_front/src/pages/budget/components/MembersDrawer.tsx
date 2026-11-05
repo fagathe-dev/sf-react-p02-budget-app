@@ -1,4 +1,4 @@
-import { useClipboard } from '@/hooks/useClipboard';
+import { useClipboard } from 'core-react';
 import { getErrorMessage } from '@/services/apiError';
 import {
   addBoardMember,

@@ -1,5 +1,5 @@
 import { LogException, LogStackFrame } from '@/types/log.types';
-import { Button } from '@/ui/components/Base/Button';
+import { Button } from '@/ui/components';
 import { useState } from 'react';
 import styled, { css } from 'styled-components';
 import { isAppFrame } from './logFormat';

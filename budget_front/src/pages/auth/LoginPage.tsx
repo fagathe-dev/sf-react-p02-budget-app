@@ -1,8 +1,8 @@
 import { useAuthStore } from '@/stores/auth.store';
 import { AuthResponse } from '@/types/auth.types';
-import { SegmentedControl } from '@/ui/components/Base/SegmentedControl';
-import { Card } from '@/ui/components/Content/Card';
-import { Text } from '@/ui/components/Typo/Text';
+import { SegmentedControl } from '@/ui/components';
+import { Card } from '@/ui/components';
+import { Text } from '@/ui/components';
 import { useEffect, useState } from 'react';
 import { Link as RouterLink, useNavigate } from 'react-router-dom';
 import styled from 'styled-components';

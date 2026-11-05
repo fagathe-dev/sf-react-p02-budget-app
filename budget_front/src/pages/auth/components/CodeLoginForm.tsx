@@ -1,10 +1,10 @@
 import { getErrorMessage } from '@/services/apiError';
 import { loginWithCode, requestLoginCode } from '@/services/auth.api';
 import { AuthResponse } from '@/types/auth.types';
-import { Button } from '@/ui/components/Base/Button';
-import { Alert } from '@/ui/components/Feedback/Alert';
-import { TextField } from '@/ui/components/Forms/Fields/TextField';
-import { Text } from '@/ui/components/Typo/Text';
+import { Button } from '@/ui/components';
+import { Alert } from '@/ui/components';
+import { TextField } from '@/ui/components';
+import { Text } from '@/ui/components';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';

@@ -1,14 +1,14 @@
 import { getErrorMessage } from '@/services/apiError';
 import { fetchEmailPreviewHtml, fetchEmailPreviews } from '@/services/emailPreview.api';
 import { EmailAddress, EmailPreview } from '@/types/emailPreview.types';
-import { Button } from '@/ui/components/Base/Button';
-import { Card } from '@/ui/components/Content/Card';
-import { EmptyState } from '@/ui/components/Content/EmptyState';
-import { ListGroup } from '@/ui/components/Content/ListGroup';
-import { Alert } from '@/ui/components/Feedback/Alert';
-import { Loading } from '@/ui/components/Feedback/Loading';
-import { Text } from '@/ui/components/Typo/Text';
-import { Title } from '@/ui/components/Typo/Title';
+import { Button } from '@/ui/components';
+import { Card } from '@/ui/components';
+import { EmptyState } from '@/ui/components';
+import { ListGroup } from '@/ui/components';
+import { Alert } from '@/ui/components';
+import { Loading } from '@/ui/components';
+import { Text } from '@/ui/components';
+import { Title } from '@/ui/components';
 import { useCallback, useEffect, useState } from 'react';
 import styled from 'styled-components';
 

@@ -57,7 +57,7 @@ import {
   SPLIT_STRATEGY_LABELS,
 } from '@/utils/budget';
 import React, { useCallback, useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import {
   ExpenseFormModal,
   GroupParticipantsDrawer,
@@ -254,7 +254,7 @@ export const ExpenseGroupDetailPage: React.FC<ExpenseGroupDetailPageProps> = (
           title="Groupe de dépenses introuvable"
           description="Ce groupe n'existe pas ou vous n'y avez pas accès."
           action={
-            <Button as={Link} to={ROUTES.EXPENSE_GROUPS} variant="primary">
+            <Button href={ROUTES.EXPENSE_GROUPS} variant="primary">
               Retour aux groupes
             </Button>
           }

@@ -28,7 +28,7 @@ import {
   formatSignedMoney,
 } from '@/utils/budget';
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CreateExpenseGroupModal } from './components';
 
 export interface ExpenseGroupsPageProps {
@@ -229,8 +229,7 @@ export const ExpenseGroupsPage: React.FC<ExpenseGroupsPageProps> = (props) => {
                       <Card.Footer>
                         <Flex justify="flex-end">
                           <Button
-                            as={Link}
-                            to={buildExpenseGroupPath(group.id)}
+                            href={buildExpenseGroupPath(group.id)}
                             variant="outline"
                             size="sm"
                           >

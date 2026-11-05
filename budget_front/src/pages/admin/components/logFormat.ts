@@ -1,5 +1,5 @@
 import { LogException, LogLevel, LogStackFrame } from '@/types/log.types';
-import { BadgeVariant } from '@/ui/components/Base/Badge';
+import { BadgeVariant } from '@/ui/components';
 
 export const LOG_LEVELS: LogLevel[] = ['debug', 'info', 'notice', 'warning', 'error', 'critical'];
 

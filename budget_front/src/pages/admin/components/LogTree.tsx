@@ -1,5 +1,5 @@
 import { LogNode } from '@/types/log.types';
-import { Icon } from '@/ui/components/Base/Icon';
+import { Icon } from '@/ui/components';
 import { useState } from 'react';
 import styled, { css } from 'styled-components';
 

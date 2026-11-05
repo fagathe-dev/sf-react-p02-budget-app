@@ -28,7 +28,7 @@ import {
   MEMBER_ROLE_LABELS,
 } from '@/utils/budget';
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 import { CreateBoardModal, PeriodSelector } from './components';
 
 export const BoardsPage: React.FC = () => {
@@ -156,8 +156,7 @@ export const BoardsPage: React.FC = () => {
         <Card.Footer>
           <Flex justify="flex-end">
             <Button
-              as={Link}
-              to={buildBoardPath(board.id, period)}
+              href={buildBoardPath(board.id, period)}
               variant="outline"
               size="sm"
             >
@@ -252,8 +251,7 @@ export const BoardsPage: React.FC = () => {
 
                 {personalBoard ? (
                   <Button
-                    as={Link}
-                    to={buildBoardPath(personalBoard.id, period)}
+                    href={buildBoardPath(personalBoard.id, period)}
                     variant="primary"
                     size="sm"
                   >

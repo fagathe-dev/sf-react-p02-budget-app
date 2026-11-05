@@ -1,9 +1,9 @@
 import { getErrorCode, getErrorMessage } from '@/services/apiError';
 import { fetchLogin, resendVerificationEmail } from '@/services/auth.api';
 import { AuthResponse } from '@/types/auth.types';
-import { Button } from '@/ui/components/Base/Button';
-import { Alert } from '@/ui/components/Feedback/Alert';
-import { TextField } from '@/ui/components/Forms/Fields/TextField';
+import { Button } from '@/ui/components';
+import { Alert } from '@/ui/components';
+import { TextField } from '@/ui/components';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';

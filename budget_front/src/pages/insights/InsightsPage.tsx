@@ -148,14 +148,13 @@ export const InsightsPage: React.FC<InsightsPageProps> = (props) => {
             onChangePeriod={(next) => setPeriod(next)}
           />
 
-          <Button as={Link} to={ROUTES.BOARDS} variant="outline" size="sm">
+          <Button href={ROUTES.BOARDS} variant="outline" size="sm">
             <Icon name="wallet-outline" size={16} />
             <span>Mes budgets</span>
           </Button>
 
           <Button
-            as={Link}
-            to={ROUTES.EXPENSE_GROUPS}
+            href={ROUTES.EXPENSE_GROUPS}
             variant="outline"
             size="sm"
           >
@@ -354,8 +353,7 @@ export const InsightsPage: React.FC<InsightsPageProps> = (props) => {
                               )}
                               {item.link && (
                                 <Button
-                                  as={Link}
-                                  to={item.link}
+                                  href={item.link}
                                   variant="outline"
                                   size="sm"
                                 >
@@ -391,8 +389,7 @@ export const InsightsPage: React.FC<InsightsPageProps> = (props) => {
                         </Card.Title>
                       </Flex>
                       <Button
-                        as={Link}
-                        to={ROUTES.BOARDS}
+                        href={ROUTES.BOARDS}
                         variant="ghost"
                         size="sm"
                       >
@@ -409,8 +406,7 @@ export const InsightsPage: React.FC<InsightsPageProps> = (props) => {
                         description="Vos charges et épargnes actives du mois apparaîtront ici triées par jour de prélèvement."
                         action={
                           <Button
-                            as={Link}
-                            to={ROUTES.BOARDS}
+                            href={ROUTES.BOARDS}
                             variant="primary"
                             size="sm"
                           >
@@ -503,8 +499,7 @@ export const InsightsPage: React.FC<InsightsPageProps> = (props) => {
                         </Card.Title>
                       </Flex>
                       <Button
-                        as={Link}
-                        to={ROUTES.BOARDS}
+                        href={ROUTES.BOARDS}
                         variant="ghost"
                         size="sm"
                       >
@@ -521,8 +516,7 @@ export const InsightsPage: React.FC<InsightsPageProps> = (props) => {
                         description="Créez un budget partagé pour suivre vos dépenses de foyer et vos versements sur compte commun."
                         action={
                           <Button
-                            as={Link}
-                            to={ROUTES.BOARDS}
+                            href={ROUTES.BOARDS}
                             variant="outline"
                             size="sm"
                           >
@@ -554,8 +548,7 @@ export const InsightsPage: React.FC<InsightsPageProps> = (props) => {
                                     {board.name}
                                   </Text>
                                   <Button
-                                    as={Link}
-                                    to={buildBoardPath(board.boardId, period)}
+                                    href={buildBoardPath(board.boardId, period)}
                                     variant="outline"
                                     size="sm"
                                   >

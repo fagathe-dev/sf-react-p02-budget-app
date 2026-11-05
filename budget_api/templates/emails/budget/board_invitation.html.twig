@@ -16,15 +16,9 @@
     content: '<strong>' ~ (dto.inviterName|e) ~ '</strong> vous invite à rejoindre son ' ~ (dto.boardTypeLabel|lower|e) ~ ' <strong>« ' ~ (dto.boardName|e) ~ ' »</strong>. Une fois l\'invitation acceptée, votre part des dépenses communes apparaîtra automatiquement dans votre budget personnel.'
   } only %}
 
-  {% include '@CorePhp/components/_section.html.twig' with {
-    align: 'center',
-    padding: '24px 0',
-    content: include('@CorePhp/components/_button.html.twig', {
-      url: dto.acceptUrl,
-      label: 'Voir l\'invitation',
-      bg_color: '#0f172b',
-      text_color: '#ffffff'
-    }, with_context = false)
+  {% include '@CorePhp/components/_button.html.twig' with {
+    url: dto.acceptUrl,
+    label: 'Voir l\'invitation'
   } only %}
 
   {% include '@CorePhp/components/_alert.html.twig' with {
@@ -37,13 +31,11 @@
 
   {% include '@CorePhp/components/_text.html.twig' with {
     level: 'small',
-    color: '#64748b',
     content: 'Lien direct : ' ~ (dto.acceptUrl|e)
   } only %}
 
   {% include '@CorePhp/components/_text.html.twig' with {
     level: 'small',
-    color: '#64748b',
     content: 'Vous ne connaissez pas ' ~ (dto.inviterName|e) ~ ' ? Ignorez simplement cet e-mail : rien ne sera partagé sans votre accord.'
   } only %}
 {% endblock %}

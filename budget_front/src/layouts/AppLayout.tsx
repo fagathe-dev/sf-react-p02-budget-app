@@ -1,9 +1,9 @@
 import { useAuth } from '@/hooks/useAuth';
 import { ROUTES } from '@/router/routes';
 import { useAuthStore } from '@/stores/auth.store';
-import { Avatar, Badge, Icon } from '@/ui/components/Base';
-import { Image } from '@/ui/components/Embed';
-import { Container } from '@/ui/components/Grid';
+import { Avatar, Badge, Icon } from '@/ui/components';
+import { Image } from '@/ui/components';
+import { Container } from '@/ui/components';
 import {
   Navbar,
   NavbarBrand,
@@ -22,8 +22,8 @@ import {
   SidebarSection,
   SidebarToggle,
   ThemeModeSwitcher,
-} from '@/ui/components/Navigation';
-import { Text } from '@/ui/components/Typo';
+} from '@/ui/components';
+import { Text } from '@/ui/components';
 import React from 'react';
 import { Link, Outlet, useLocation } from 'react-router-dom';
 import styled from 'styled-components';

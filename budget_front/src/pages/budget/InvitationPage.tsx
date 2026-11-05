@@ -24,7 +24,7 @@ import {
   useToast,
 } from '@/ui/components';
 import React, { useEffect, useState } from 'react';
-import { Link, useNavigate, useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 
 export const InvitationPage: React.FC = () => {
   const { token } = useParams<{ token: string }>();
@@ -201,12 +201,11 @@ export const InvitationPage: React.FC = () => {
                     Connectez-vous ou créez un compte pour accepter cette
                     invitation.
                   </Alert>
-                  <Button as={Link} to={ROUTES.LOGIN} variant="primary" fullWidth>
+                  <Button href={ROUTES.LOGIN} variant="primary" fullWidth>
                     Se connecter
                   </Button>
                   <Button
-                    as={Link}
-                    to={ROUTES.REGISTER}
+                    href={ROUTES.REGISTER}
                     variant="outline"
                     fullWidth
                   >
@@ -218,7 +217,7 @@ export const InvitationPage: React.FC = () => {
           )}
 
           <Flex justify="center">
-            <Button as={Link} to={ROUTES.HOME} variant="ghost" size="sm">
+            <Button href={ROUTES.HOME} variant="ghost" size="sm">
               Retour à l'accueil
             </Button>
           </Flex>

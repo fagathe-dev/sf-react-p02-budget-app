@@ -1,5 +1,5 @@
 import { useAuthStore } from '@/stores/auth.store';
-import { Loading } from '@/ui/components/Feedback/Loading';
+import { Loading } from '@/ui/components';
 import { useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 

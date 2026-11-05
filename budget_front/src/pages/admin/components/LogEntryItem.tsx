@@ -1,7 +1,7 @@
 import { LogEntry } from '@/types/log.types';
-import { Badge } from '@/ui/components/Base/Badge';
-import { Icon } from '@/ui/components/Base/Icon';
-import { Accordion } from '@/ui/components/Content/Accordion';
+import { Badge } from '@/ui/components';
+import { Icon } from '@/ui/components';
+import { Accordion } from '@/ui/components';
 import styled, { css } from 'styled-components';
 import { LogExceptionDetails } from './LogExceptionDetails';
 import {

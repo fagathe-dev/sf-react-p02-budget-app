@@ -1,10 +1,10 @@
 import { useAuth } from '@/hooks/useAuth';
 import { useAuthStore } from '@/stores/auth.store';
-import { Badge } from '@/ui/components/Base/Badge';
-import { Icon } from '@/ui/components/Base/Icon';
-import { TabContent, TabList, Tabs, TabTrigger } from '@/ui/components/Navigation/Tabs';
-import { Text } from '@/ui/components/Typo/Text';
-import { Title } from '@/ui/components/Typo/Title';
+import { Badge } from '@/ui/components';
+import { Icon } from '@/ui/components';
+import { TabContent, TabList, Tabs, TabTrigger } from '@/ui/components';
+import { Text } from '@/ui/components';
+import { Title } from '@/ui/components';
 import React from 'react';
 import styled from 'styled-components';
 import {

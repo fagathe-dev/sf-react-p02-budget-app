@@ -1,12 +1,12 @@
 import { getErrorMessage } from '@/services/apiError';
 import { verifyEmail } from '@/services/auth.api';
 import { useAuthStore } from '@/stores/auth.store';
-import { Button } from '@/ui/components/Base/Button';
-import { Card } from '@/ui/components/Content/Card';
-import { Alert } from '@/ui/components/Feedback/Alert';
-import { Loading } from '@/ui/components/Feedback/Loading';
+import { Button } from '@/ui/components';
+import { Card } from '@/ui/components';
+import { Alert } from '@/ui/components';
+import { Loading } from '@/ui/components';
 import { useEffect, useRef, useState } from 'react';
-import { Link as RouterLink, useNavigate, useSearchParams } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 
 /**
  * Page ouverte depuis le lien reçu à l'inscription (/verify-email?token=…) :
@@ -47,7 +47,7 @@ export const VerifyEmailPage = () => {
         {error ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <Alert variant="danger">{error}</Alert>
-            <Button as={RouterLink} to="/login" fullWidth>
+            <Button href="/login" fullWidth>
               Se connecter pour recevoir un nouveau lien
             </Button>
           </div>

@@ -1,11 +1,11 @@
 import { getErrorMessage } from '@/services/apiError';
 import { deleteAccount, requestAccountDeletion } from '@/services/auth.api';
 import { useAuthStore } from '@/stores/auth.store';
-import { Button } from '@/ui/components/Base/Button';
-import { Alert } from '@/ui/components/Feedback/Alert';
-import { TextField } from '@/ui/components/Forms/Fields/TextField';
-import { Text } from '@/ui/components/Typo/Text';
-import { Title } from '@/ui/components/Typo/Title';
+import { Button } from '@/ui/components';
+import { Alert } from '@/ui/components';
+import { TextField } from '@/ui/components';
+import { Text } from '@/ui/components';
+import { Title } from '@/ui/components';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useEffect, useState } from 'react';
 import { useForm } from 'react-hook-form';

@@ -1,9 +1,9 @@
 import { getErrorMessage, getFieldErrors } from '@/services/apiError';
 import { resetPassword } from '@/services/auth.api';
-import { Button } from '@/ui/components/Base/Button';
-import { Card } from '@/ui/components/Content/Card';
-import { Alert } from '@/ui/components/Feedback/Alert';
-import { TextField } from '@/ui/components/Forms/Fields/TextField';
+import { Button } from '@/ui/components';
+import { Card } from '@/ui/components';
+import { Alert } from '@/ui/components';
+import { TextField } from '@/ui/components';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useState } from 'react';
 import { useForm } from 'react-hook-form';
@@ -69,7 +69,7 @@ export const ResetPasswordPage = () => {
         {successMessage ? (
           <div style={{ display: 'flex', flexDirection: 'column', gap: '1rem' }}>
             <Alert variant="success">{successMessage}</Alert>
-            <Button as={RouterLink} to="/login" fullWidth>
+            <Button href="/login" fullWidth>
               Se connecter
             </Button>
           </div>
